@@ -5,7 +5,7 @@ import img4 from './assets/4.png'
 import img5 from './assets/5.png'
 
 
-export const products = [
+export const tempData = [
     {
         id: 1,
         name: 'T-shirt',
@@ -13,7 +13,7 @@ export const products = [
         price: 200,
         description: "This is a simple t-shirt with black color and white print.",
         brand: 'LCwikiki',
-        category: clothes,
+        category: 'clothes',
     },
     {
         id: 2,
@@ -22,7 +22,7 @@ export const products = [
         price: 250,
         description: "This is a simple Shoes with red color and white print.",
         brand: 'LCwikiki',
-        category: clothes,
+        category: 'clothes',
     },
     {
         id: 3,
@@ -31,7 +31,7 @@ export const products = [
         price: 10,
         description: "This is a simple Orange with black color and white print.",
         brand: 'Gomla Market',
-        category: fruits,
+        category: 'fruits',
     },
     {
         id: 4,
@@ -40,7 +40,7 @@ export const products = [
         price: 69.99,
         description: "This is a simple tangerine with black color and white print.",
         brand: 'Gomla Market',
-        category: fruits,
+        category: 'fruits',
     },
     {
         id: 5,
@@ -49,6 +49,6 @@ export const products = [
         price: 59.50,
         description: "This is a simple brocli with black color and white print.",
         brand: 'Gomla Market',
-        category: vegetables,
+        category: 'vegetables',
     },
 ]

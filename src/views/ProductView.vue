@@ -7,7 +7,7 @@
         <FilterProducts />
       </div>
       <div class="col-lg-9">
-        <ProductList />
+        <ProductList :products_props="product" />
       </div>
     </div>
   </div>
@@ -18,15 +18,22 @@
 </template>
 
 <script >
-import ProductList from '@/components/ProductList.vue';
-import FilterProducts from '@/components/FilterProducts.vue';
+  import ProductList from '@/components/ProductList.vue';
+  import FilterProducts from '@/components/FilterProducts.vue';
 
-export default {
-    name: 'ProductView',
-    components:{
-      ProductList,
-      FilterProducts
+  import { tempData } from '@/temp-data';
+
+  export default {
+      name: 'ProductView',
+      components:{
+        ProductList,
+        FilterProducts
+      },
+      data(){
+        return {
+          product: tempData
+        }
+      }
     }
-  }
 
 </script>
