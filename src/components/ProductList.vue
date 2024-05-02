@@ -5,10 +5,10 @@
 
       <div class="col-lg-4 my-5" v-for="product in products_props" :key="product.id">
         <div class="card">
-        <img src="" class="card-img-top" alt="...">
+        <img :src="product.image" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">{{ product.name }} </h5>
-            <RouterLink class="btn btn-primary" to="/about">Detail</RouterLink>
+            <RouterLink class="btn btn-primary" to="/ + product.id">Detail</RouterLink>
           </div>
         </div>
       </div>
@@ -27,3 +27,11 @@
 
 </script>
 
+<style>
+
+img{
+  width: 297px;
+  height: 205px;
+}
+
+</style>
