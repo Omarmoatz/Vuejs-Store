@@ -5,11 +5,17 @@
       
       <div class="col-lg-12">
 
-        <div class="card  py-4">
-          <h6 class="border-bottom mx-5 ">Filter by brand</h6>
-          <div class="card-body ms-5">
-            <input type="checkbox" class="ckeckbox-" >
-            <label for=""> brand</label>
+        <div class="card bg-light  py-4">
+          <h6 class="border-bottom mx-4 ">Filter by brand</h6>
+          <div class="card-body ms-3">
+
+            <div class="form-check" v-for="brand in brands" :key="brand.id">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">
+                {{ brand.name }}
+              </label>
+            </div>
+
           </div>
         </div>
 
@@ -21,9 +27,16 @@
 
 <script>
 
-export default {
-  name: 'Filter'
-}
+  import { tempData_brands } from '@/temp-data';
+
+  export default {
+    name: 'Filter',
+    data(){
+      return {
+        brands: tempData_brands,
+      }
+    }
+  }
 </script>
 
 <style>
