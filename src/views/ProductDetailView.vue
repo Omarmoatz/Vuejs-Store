@@ -1,5 +1,8 @@
 <template>
-
+    <div class=" text-center e bg-gradient pb-5 ">
+      <img :src="img" class="img-fluid my_imag" >
+      <h2 class="my-4">{{ product.name }} Details </h2>
+    </div>
     <div class="container my-5">
       <div class="row">
 
@@ -35,12 +38,14 @@
 
 <script>
   import { tempData } from '@/temp-data';
+  import img6 from '../assets/7.jpg'
 
   export default {
     name: 'ProductDetailView',
     data(){
       return {
-        product: tempData.find(product => product.id == this.$route.params.productId)
+        product: tempData.find(product => product.id == this.$route.params.productId),
+        img : img6
       }
     }
   }

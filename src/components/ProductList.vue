@@ -1,6 +1,5 @@
 <template>
   <div class="container-fluid my-5">
-    <h4> Products</h4>
     <div class="row">
 
       <div class="col-lg-3 my-5" v-for="product in products_props" :key="product.id">

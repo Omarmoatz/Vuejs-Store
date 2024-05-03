@@ -1,8 +1,6 @@
 <template>
   <div class="container my-5">
-    <h4>Filter</h4>
-    <div class="row my-5">
-      
+    <div class="row my-5">     
       <div class="col-lg-12">
 
         <div class="card bg-light  py-4">

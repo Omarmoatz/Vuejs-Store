@@ -1,4 +1,9 @@
 <template>
+  <div class=" text-center pb-5 ">
+    <img :src="img" class="img-fluid" >
+    <h2 class="my-4">Welcome To Our Store</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque laudantium modi laboriosam quo.</p>
+  </div>
 
   <div class="container">
     <div class="row">
@@ -20,6 +25,8 @@
 
   import { tempData } from '@/temp-data';
 
+  import img6 from '../assets/7.jpg'
+
   export default {
       name: 'ProductView',
       components:{
@@ -29,7 +36,8 @@
       data(){
         return {
           product: tempData,
-          filterProducts: tempData
+          filterProducts: tempData,
+          img : img6
         }
       },
       methods: {
