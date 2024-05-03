@@ -4,16 +4,13 @@
     <div class="row">
       <div class="col-lg-3">
         
-        <FilterProducts />
+        <FilterProducts @selected_data="filter_data" />
       </div>
       <div class="col-lg-9">
-        <ProductList :products_props="product" />
+        <ProductList :products_props="filterProducts" />
       </div>
     </div>
   </div>
-
-
-
 
 </template>
 
@@ -31,7 +28,19 @@
       },
       data(){
         return {
-          product: tempData
+          product: tempData,
+          filterProducts: tempData
+        }
+      },
+      methods: {
+        filter_data(selectedBrands){
+          if (selectedBrands.length == 0) {
+            this.filterProducts = this.product
+          }
+          else{
+            this.filterProducts = this.product.filter(product => selectedBrands.includes(product.brand_id))
+          }
+
         }
       }
     }

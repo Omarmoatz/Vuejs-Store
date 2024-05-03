@@ -10,8 +10,11 @@
           <div class="card-body ms-3">
 
             <div class="form-check" v-for="brand in brands" :key="brand.id">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-              <label class="form-check-label" for="flexCheckDefault">
+              <input class="form-check-input" type="checkbox"
+              :value="brand.id"
+              
+              v-model="selectedBrands">
+              <label class="form-check-label" >
                 {{ brand.name }}
               </label>
             </div>
@@ -34,8 +37,14 @@
     data(){
       return {
         brands: tempData_brands,
+        selectedBrands: []
       }
-    }
+    },
+    watch: {
+      selectedBrands(){
+        this.$emit('selected_data',this.selectedBrands)
+      }
+    } 
   }
 </script>
 
