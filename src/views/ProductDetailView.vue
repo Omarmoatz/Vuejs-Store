@@ -7,14 +7,17 @@
           <img :src="product.image" alt="" width="100%"/>
         </div>
 
-        <div class="col-lg-6 mt-5 border border-1 rounded-3 px-5 py-5">
+        <div class="col-lg-6 mt-5 border border-1 border-black rounded-3 px-5 py-5 bg-light-subtle ">
           <h1>{{ product.name }}</h1>
           <div class="d-flex my-3">
             <h6 class="me-5"><span class="text-primary">brand :</span> {{ product.brand }}</h6>
             <h6 class=""><span class="text-primary">category :</span> {{ product.category }}</h6>
           </div>    
           <p>{{ product.description }}</p>
-          <h4 class="text-success" >$ {{ product.price }}</h4>
+          <div class="d-flex my-4">
+              <h6 class="text-danger text-decoration-line-through mx-3 fs-5" >$ 1000 </h6>
+              <h6 class="text-success fs-4" >$ {{ product.price }}</h6>
+            </div>
           <!-- add to cart button -->
           <form class="mt-5" >
             <div class="d-flex">

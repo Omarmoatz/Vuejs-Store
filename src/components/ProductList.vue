@@ -5,10 +5,15 @@
 
       <div class="col-lg-3 my-5" v-for="product in products_props" :key="product.id">
         <div class="card">
-        <img :src="product.image" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">{{ product.name }} </h5>
-            <RouterLink class="btn btn-primary" :to="'/' + product.id">Detail</RouterLink>
+        <img :src="product.image" class="card-img-top px-3 py-3 rounded-1" alt="...">
+          <div class="card-body text-center">
+            <h5 class="card-title fs-3 ">{{ product.name }} </h5>
+            <div class="d-flex my-3">
+              <h6 class="text-danger text-decoration-line-through mx-3 fs-5" >$ 1000 </h6>
+              <h6 class="text-success fs-4" >$ {{ product.price }}</h6>
+            </div>
+            
+            <RouterLink class="btn btn-outline-primary px-5" :to="'/' + product.id">Detail</RouterLink>
           </div>
         </div>
       </div>
