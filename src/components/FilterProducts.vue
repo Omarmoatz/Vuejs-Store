@@ -11,8 +11,7 @@
 
             <div class="form-check" v-for="brand in brands" :key="brand.id">
               <input class="form-check-input" type="checkbox"
-              :value="brand.id"
-              
+              :value="brand.id"  
               v-model="selectedBrands">
               <label class="form-check-label" >
                 {{ brand.name }}
